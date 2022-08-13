@@ -1,0 +1,50 @@
+{% extends 'base.html'%}
+{% load static %}
+{% load socialaccount %}
+
+
+{% block content %}
+        <!-- Hero Start -->
+        <section class="bg-home d-flex bg-light align-items-center" style="background: url('https://merriam-webster.com/assets/mw/images/article/art-wap-landing-mp-lg/alt-5ae892611bf1a-5168-1472832016f2509f3889266323039a33@1x.jpg')  no-repeat center; background-size: cover;">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-5 col-md-8">
+                        <!-- <img src="{% static 'assets/images/logo-dark.png' %}" height="24" class="mx-auto d-block" alt=""> -->
+                        <div class="card login-page bg-white shadow mt-4 rounded border-0">
+                            <div class="card-body">
+                                <h4 class="text-center">Sign In</h4>  
+                                <form novalidate class="needs-validation"  method="POST">
+                                    {% csrf_token %}
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="mb-3">
+                                                <label class="form-label">Your Phone Number <span class="text-danger">*</span></label>
+                                                <input aria-autocomplete="none" type="tel" class="form-control" placeholder="Phone Number" name="phone_number" required="">
+                                                 <div class="invalid-feedback">
+                                                    This field is required
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <div class="d-flex justify-content-between">
+                                                <div class="mb-3">
+                                                    
+                                                </div>
+                                                <a href="{% url 'login' %}" class="text-dark h6 mb-0">Login with Password</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 mb-0">
+                                            <div class="d-grid">
+                                                <button type= 'submit' class="btn btn-primary">Sign in</button>
+                                            </div>
+                                        </div>
+
+                                </form>
+                            </div>
+                        </div><!---->
+                    </div> <!--end col-->
+                </div><!--end row-->
+            </div> <!--end container-->
+        </section><!--end section-->
+        <!-- Hero End -->
+{% endblock %}

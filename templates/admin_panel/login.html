@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+{% load static %}
+    <html lang="en">
+
+    <head>
+        <meta charset="utf-8" />
+        <title>Doctris - Doctor Appointment Booking System</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Premium Bootstrap 4 Landing Page Template" />
+        <meta name="keywords" content="Appointment, Booking, System, Dashboard, Health" />
+        <meta name="author" content="Shreethemes" />
+        <meta name="email" content="support@shreethemes.in" />
+        <meta name="website" content="https://shreethemes.in" />
+        <meta name="Version" content="v1.2.0" />
+        <!-- favicon -->
+        <link rel="shortcut icon" href="{% static 'assets/images/favicon.ico' %}">
+        <!-- Bootstrap -->
+        <link href="{% static 'assets/css/bootstrap.min.css' %}" rel="stylesheet" type="text/css" />
+        <!-- Icons -->
+        <link href="{% static 'assets/css/materialdesignicons.min.css' %}" rel="stylesheet" type="text/css" />
+        <link href="{% static 'assets/css/remixicon.css' %}" rel="stylesheet" type="text/css" />
+        <link href="{% static 'assets/release/v3.0.6/css/line.css' %}"  rel="stylesheet">
+        <!-- Css -->
+        <link href="{% static 'assets/css/style.min.css' %}" rel="stylesheet" type="text/css" id="theme-opt" />
+
+    </head>
+
+    <body>
+        <!-- Loader -->
+        <div id="preloader">
+            <div id="status">
+                <div class="spinner">
+                    <div class="double-bounce1"></div>
+                    <div class="double-bounce2"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Loader -->
+        
+
+        <!-- Hero Start -->
+        <section class="bg-home d-flex bg-light align-items-center" style="background: url('/static/assets/images/bg/bg-lines-one.png') center;">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-5 col-md-8">
+                        <div class="card login-page bg-white shadow mt-4 rounded border-0">
+                            <div class="card-body">
+                                <h4 class="text-center">Sign In</h4>  
+                                <form novalidate class="needs-validation"  method="POST">
+                                    {% csrf_token %}
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="mb-3">
+                                                <label class="form-label">Your Email</label>
+                                                <input aria-autocomplete="none" type="email" class="form-control" placeholder="Email" name="email" required="">
+                                                 <div class="invalid-feedback">
+                                                    This field is required
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-12">
+                                            <div class="mb-3">
+                                                <label class="form-label">Password</label>
+                                                <input type="password" class="form-control" name= password placeholder="Password" required="">
+                                                 <div class="invalid-feedback">
+                                                    This field is required
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        
+                                        <div class="col-lg-12 mb-0">
+                                            <div class="d-grid">
+                                                <button type='submit' class="btn btn-primary">Sign in</button>
+                                            </div>
+                                        </div>
+
+                                        
+                                    </div>
+                                </form>
+                            </div>
+                        </div><!---->
+                    </div> <!--end col-->
+                </div><!--end row-->
+            </div> <!--end container-->
+        </section><!--end section-->
+        <!-- Hero End -->
+        
+            {% comment %} modal messages {% endcomment %}
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script>
+            {% for msg in messages %}
+            swal('{{msg}}')
+            {% endfor %}
+        </script>
+        <!-- javascript -->
+        <script src="{% static 'assets/js/bootstrap.bundle.min.js' %}"></script>
+        <!-- Icons -->
+        <script src="{% static 'assets/js/feather.min.js' %}"></script>
+        <!-- Main Js -->
+        <script src="{% static 'assets/js/app.js' %}"></script>
+        
+    </body>
+
+</html>

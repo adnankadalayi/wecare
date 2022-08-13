@@ -1,0 +1,108 @@
+{% extends 'doctors/base.html'%}
+{% load static %}
+
+{% block content %}
+
+        <!-- Hero Start -->
+        <section class="bg-home d-table w-100 bg-light" style="background: url('/static/assets/images/istockphoto-1152347304-612x612.jpg')  no-repeat center; background-size: cover;">
+            <div class="container mt-5 mb-5">
+                <div class="row justify-content-center">
+                    <div class="col-lg-5 col-md-8">
+                        <!-- <img src="{% static 'assets/images/logo-dark.png' %}" height="24" class="mx-auto d-block" alt=""> -->
+                        <div class="card login-page bg-white shadow mt-4 rounded border-0 box1">
+                            <div class="card-body">
+                                <h4 class="text-center">Sign Up</h4>  
+                                <form novalidate  method="POST" >
+                                    {% csrf_token %}
+                                    <div class="row">                                        
+                                        <div class="col-md-6">
+                                            <div class="mb-3">  
+                                                 {{form.first_name.label}}
+                                            {{form.first_name}}  
+                                             <span style='color:red'>{{ form.first_name.errors }}</span>                                           
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="mb-3">  
+                                                 {{form.last_name.label}}
+                                            {{form.last_name}}   
+                                             <span style='color:red'>{{ form.last_name.errors }}</span>                                           
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="mb-3">
+                                                 {{form.email.label}}
+                                            {{form.email}}
+                                             <span style='color:red'>{{ form.email.errors }}</span>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-md-12">
+                                            <div class="mb-3">
+                                                 {{form.phone_number.label}}
+                                            {{form.phone_number}}
+                                             <span style='color:red'>{{ form.phone_number.errors }}</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="mb-3">  
+                                                 {{form.password.label}}
+                                            {{form.password}}  
+                                             <span style='color:red'>{{ form.password.errors }}</span>                                           
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="mb-3">  
+                                                 {{form.confirm_password.label}}
+                                            {{form.confirm_password}}  
+                                             <span style='color:red'>{{ form.confirm_password.errors }}</span>                                          
+                                            </div>
+                                        </div>
+                                        {% if form.non_field_errors %}
+                                        <span style='color:red'> {{ form.non_field_errors.as_ul }}</span>
+                                        {% endif %}
+                                                                                    
+                                        <div class="col-md-12">
+                                            <div class="mb-1">
+                                                <div class="form-check">
+                                                    <input class="form-check-input align-middle" type="checkbox" value="" id="accept-tnc-check">
+                                                    <label class="form-check-label" for="accept-tnc-check">I Accept <a href="#" class="text-primary">Terms And Condition</a></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="d-grid">
+                                                <input type='submit' value="Register" class="btn btn-primary">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-12 mt-3 text-center">
+                                            <h6 class="text-muted">Or</h6>
+                                        </div><!--end col-->
+                                        
+                                        <div class="col-6 mt-2">
+                                            <div class="d-grid">
+                                                <a href="javascript:void(0)" class="btn btn-soft-primary"><i class="uil uil-facebook"></i> Facebook</a>
+                                            </div>
+                                        </div><!--end col-->
+                                        
+                                        <div class="col-6 mt-3">
+                                            <div class="d-grid">
+                                                <a href="javascript:void(0)" class="btn btn-soft-primary"><i class="uil uil-google"></i> Google</a>
+                                            </div>
+                                        </div><!--end col-->
+
+                                        <div class="mx-auto">
+                                            <p class="mb-0 mt-3"><small class="text-dark me-2">Already have an account ?</small> <a href="{% url 'doctor_login' %}" class="text-dark fw-bold">Sign in</a></p>
+                                            <p class="mb-0 mt-3 text-center"><small class="text-dark me-2 "></small> <a href="{% url 'signup' %}" class="text-dark fw-bold">Go Back</a></p>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div><!---->
+                    </div> <!--end col-->
+                </div><!--end row-->
+            </div> <!--end container-->
+        </section><!--end section-->
+        <!-- Hero End -->
+{% endblock %}

@@ -1,0 +1,78 @@
+{% extends 'admin_panel/base.html' %}
+
+
+
+{% block content %}
+<div class="container-fluid">
+    <div class="layout-specing">
+        <div class="d-md-flex justify-content-between">
+            <h5 class="mb-0">Patients</h5>
+            
+
+            
+        </div>
+
+
+
+<div class="row">
+    <div class="col-12 mt-4">
+        <div class="table-responsive bg-white shadow rounded">
+            <table class="table mb-0 table-center">
+                <thead>
+                    <tr>
+                        <th class="border-bottom p-3" style="min-width: 50px;">#</th>
+                        <th class="border-bottom p-3" style="min-width: 180px;">Name</th>
+                        <th class="border-bottom p-3" style="min-width: 150px;">Email</th>
+                        <th class="border-bottom p-3">Phone Number</th>
+                        {% comment %} <th class="border-bottom p-3">Gender</th> {% endcomment %}
+                        <th class="border-bottom p-3">Date Joined</th>
+                        <th class="border-bottom p-3" style="min-width: 150px;">Last Login</th>
+                        {% comment %} <th class="border-bottom p-3">Time</th>
+                        <th class="border-bottom p-3" style="min-width: 220px;">Doctor</th>
+                        <th class="border-bottom p-3">Fees</th>
+                        <th class="border-bottom p-3" style="min-width: 150px;"></th> {% endcomment %}
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for i in patients %}
+                    <tr>
+                        <th class="p-3">{{ forloop.counter }}</th>
+                        <td class="p-3">
+                            <a href="#" class="text-dark">
+                                <div class="d-flex align-items-center">
+                                    {% comment %} <img src="../assets/images/client/01.jpg" class="avatar avatar-md-sm rounded-circle shadow" alt=""> {% endcomment %}
+                                    <span class="ms-2">{{i.full_name}}</span>
+                                </div>
+                            </a>
+                        </td>
+                        <td class="p-3">{{i.email}}</td>
+                        <td class="p-3">{{i.phone_number}}</td>
+                        <td class="p-3">{{i.date_joined}}</td>
+                        <td class="p-3">{{i.last_login}}</td>
+                        {% comment %} <td class="p-3">{{i.full_name}}</td>
+                        <td class="p-3">{{i.full_name}}</td>
+                        <td class="p-3">
+                            <a href="#" class="text-dark">
+                                <div class="d-flex align-items-center">
+                                    <img src="../assets/images/doctors/01.jpg" class="avatar avatar-md-sm rounded-circle border shadow" alt="">
+                                    <span class="ms-2">Dr. Calvin Carlo</span>
+                                </div>
+                            </a>
+                        </td>
+                        <td class="p-3">$50/Patient</td>
+                        <td class="text-end p-3">
+                            <a href="#" class="btn btn-icon btn-pills btn-soft-primary" data-bs-toggle="modal" data-bs-target="#viewappointment"><i class="uil uil-eye"></i></a>
+                            <a href="#" class="btn btn-icon btn-pills btn-soft-success" data-bs-toggle="modal" data-bs-target="#acceptappointment"><i class="uil uil-check-circle"></i></a>
+                            <a href="#" class="btn btn-icon btn-pills btn-soft-danger" data-bs-toggle="modal" data-bs-target="#cancelappointment"><i class="uil uil-times-circle"></i></a>
+                        </td> {% endcomment %}
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div><!--end row-->
+
+
+
+{% endblock content %}

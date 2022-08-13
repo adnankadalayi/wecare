@@ -1,0 +1,313 @@
+{% extends 'doctors/base.html'%}
+{% load static %}
+
+{% block content %}
+
+ <!-- Start Hero -->
+ <section class="bg-half-170 pb-0 d-table w-100" style="background-color: rgb(224, 247, 255);">
+    <div class="container">
+        {% if user.is_activated == False %}
+        <div class="alert alert-danger" style="background-color: rgb(255, 243, 243); color: red;" role="alert">
+            Doctor is not verifed. <a href='{% url 'doctor_profile' user.id %}'>Update your Details</a>
+        </div>
+        {% endif %}
+        <div class="row mt-5 mt-sm-0 align-items-center">
+            <div class="col-md-7">
+                <div class="heading-title">
+                   <h3>Welcome <span style="color: rgb(255, 134, 152);">Dr. {{user.full_name}}</span></h3>
+                </div><br><br><br><br><br><br>
+                {% if user.is_activated == True %}
+                <div class="heading-title">
+                    <h3>You Have  <span style="color: rgb(134, 241, 255);">8 Patients </span>remaining today!</h3>
+                 </div>
+                {% endif %}
+ 
+                 
+                
+            </div><!--end col-->
+
+            <div class="col-md-5 mt-4 pt-2 mt-sm-0 pt-sm-0 ">
+                <img src="{% static 'assets/images/Doctors-rafiki.svg' %}" class="img-fluid" alt="image">
+            </div><!--end col-->
+        </div><!--end row-->
+    </div><!--end container-->
+</section><!--end section-->
+<!-- End Hero -->
+
+
+
+<!-- Start -->
+<section class="bg-dashboard">
+    <div class="container">
+        <div class="row">
+            
+
+            <div class="col-xl-12 col-lg-12 col-md-7 mt-4 pt-2 mt-sm-0 pt-sm-0">
+                <div class="row">
+                    <h3 class="text-center">Appointments</h3>
+
+                    <div class="col-xl-3 col-lg-6 col-md-8 mt-4 mt-md-0">
+                        <div class="justify-content-md-end">
+                            
+                        </div>
+                    </div><!--end col-->
+                </div><!--end row-->
+                
+                {% if user.is_activated == False %}
+                <div class="table-responsive bg-white shadow rounded">
+                    <h4 class="text-center mt-3 mb-3" style='color:rgb(255 54 84);'>Please verify your Account to see the Appointments</h4>
+                </div>
+                {% else %}
+                <div class="row">
+                    <div class="col-12 mt-4">
+                        <div class="table-responsive bg-white shadow rounded">
+                            <table class="table mb-0 table-center">
+                                <thead>
+                                    <tr>
+                                        <th class="border-bottom p-3" style="min-width: 50px;">#</th>
+                                        <th class="border-bottom p-3" style="min-width: 180px;">Name</th>
+                                        <th class="border-bottom p-3">Age</th>
+                                        <th class="border-bottom p-3">Gender</th>
+                                        <th class="border-bottom p-3">Department</th>
+                                        <th class="border-bottom p-3" style="min-width: 150px;">Date</th>
+                                        <th class="border-bottom p-3">Time</th>
+                                        <th class="border-bottom p-3"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th class="p-3">1</th>
+                                        <td class="p-3">
+                                            <a href="#" class="text-dark">
+                                                <div class="d-flex align-items-center">
+                                                    <img src="{% static 'assets/images/client/01.jpg' %}" class="avatar avatar-md-sm rounded-circle shadow" alt="">
+                                                    <span class="ms-2">Howard Tanner</span>
+                                                </div>
+                                            </a>
+                                        </td>
+                                        <td class="p-3">25</td>
+                                        <td class="p-3">Male</td>
+                                        <td class="p-3">Cardiology</td>
+                                        <td class="p-3">20th Dec 2020</td>
+                                        <td class="p-3">11:00AM</td>
+                                        <td class="p-3">
+                                            <button class="btn btn-primary">Join</button>
+                                        </td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <th class="p-3">2</th>
+                                        <td class="p-3">
+                                            <a href="#" class="text-dark">
+                                                <div class="d-flex align-items-center">
+                                                    <img src="{% static 'assets/images/client/02.jpg' %}" class="avatar avatar-md-sm rounded-circle shadow" alt="">
+                                                    <span class="ms-2">Wendy Filson</span>
+                                                </div>
+                                            </a>
+                                        </td>
+                                        <td class="p-3">28</td>
+                                        <td class="p-3">Female</td>
+                                        <td class="p-3">Gynecology</td>
+                                        <td class="p-3">20th Dec 2020</td>
+                                        <td class="p-3">11:00AM</td>
+                                        <td class="p-3">
+                                            <button class="btn btn-primary">Join</button>
+                                        </td>
+                                       
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <th class="p-3">3</th>
+                                        <td class="p-3">
+                                            <a href="#" class="text-dark">
+                                                <div class="d-flex align-items-center">
+                                                    <img src="{% static 'assets/images/client/03.jpg' %}" class="avatar avatar-md-sm rounded-circle shadow" alt="">
+                                                    <span class="ms-2">Faye Bridger</span>
+                                                </div>
+                                            </a>
+                                        </td>
+                                        <td class="p-3">28</td>
+                                        <td class="p-3">Female</td>
+                                        <td class="p-3">Psychotherapy</td>
+                                        <td class="p-3">20th Dec 2020</td>
+                                        <td class="p-3">11:00AM</td>
+                                        <td class="p-3">
+                                            <button class="btn btn-primary">Join</button>
+                                        </td>
+                                   
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <th class="p-3">4</th>
+                                        <td class="p-3">
+                                            <a href="#" class="text-dark">
+                                                <div class="d-flex align-items-center">
+                                                    <img src="{% static 'assets/images/client/04.jpg' %}" class="avatar avatar-md-sm rounded-circle shadow" alt="">
+                                                    <span class="ms-2">Ronald Curtis</span>
+                                                </div>
+                                            </a>
+                                        </td>
+                                        <td class="p-3">25</td>
+                                        <td class="p-3">Male</td>
+                                        <td class="p-3">Orthopedic</td>
+                                        <td class="p-3">20th Dec 2020</td>
+                                        <td class="p-3">11:00AM</td>
+                                        <td class="p-3">
+                                            <button class="btn btn-primary">Join</button>
+                                        </td>
+                               
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <th class="p-3">5</th>
+                                        <td class="p-3">
+                                            <a href="#" class="text-dark">
+                                                <div class="d-flex align-items-center">
+                                                    <img src="{% static 'assets/images/client/05.jpg' %}" class="avatar avatar-md-sm rounded-circle shadow" alt="">
+                                                    <span class="ms-2">Melissa Hibner</span>
+                                                </div>
+                                            </a>
+                                        </td>
+                                        <td class="p-3">28</td>
+                                        <td class="p-3">Female</td>
+                                        <td class="p-3">Dental</td>
+                                        <td class="p-3">20th Dec 2020</td>
+                                        <td class="p-3">11:00AM</td>
+                                        <td class="p-3">
+                                            <button class="btn btn-primary">Join</button>
+                                        </td>
+                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <th class="p-3">6</th>
+                                        <td class="p-3">
+                                            <a href="#" class="text-dark">
+                                                <div class="d-flex align-items-center">
+                                                    <img src="{% static 'assets/images/client/06.jpg' %}" class="avatar avatar-md-sm rounded-circle shadow" alt="">
+                                                    <span class="ms-2">Randall Case</span>
+                                                </div>
+                                            </a>
+                                        </td>
+                                        <td class="p-3">25</td>
+                                        <td class="p-3">Male</td>
+                                        <td class="p-3">Orthopedic</td>
+                                        <td class="p-3">20th Dec 2020</td>
+                                        <td class="p-3">11:00AM</td>
+                                        <td class="p-3">
+                                            <button class="btn btn-primary">Join</button>
+                                        </td>
+                                      
+                                        
+                                    </tr>
+
+                                    <tr>
+                                        <th class="p-3">7</th>
+                                        <td class="p-3">
+                                            <a href="#" class="text-dark">
+                                                <div class="d-flex align-items-center">
+                                                    <img src="{% static 'assets/images/client/07.jpg' %}" class="avatar avatar-md-sm rounded-circle shadow" alt="">
+                                                    <span class="ms-2">Jerry Morena</span>
+                                                </div>
+                                            </a>
+                                        </td>
+                                        <td class="p-3">25</td>
+                                        <td class="p-3">Male</td>
+                                        <td class="p-3">Dentist</td>
+                                        <td class="p-3">20th Dec 2020</td>
+                                        <td class="p-3">11:00AM</td>
+                                        <td class="p-3">
+                                            <button class="btn btn-primary">Join</button>
+                                        </td>
+                                 
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <th class="p-3">8</th>
+                                        <td class="p-3">
+                                            <a href="#" class="text-dark">
+                                                <div class="d-flex align-items-center">
+                                                    <img src="{% static 'assets/images/client/08.jpg' %}" class="avatar avatar-md-sm rounded-circle shadow" alt="">
+                                                    <span class="ms-2">Lester McNally</span>
+                                                </div>
+                                            </a>
+                                        </td>
+                                        <td class="p-3">25</td>
+                                        <td class="p-3">Male</td>
+                                        <td class="p-3">Gastrology</td>
+                                        <td class="p-3">20th Dec 2020</td>
+                                        <td class="p-3">11:00AM</td>
+                                        <td class="p-3">
+                                            <button class="btn btn-primary">Join</button>
+                                        </td>
+                                       
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <th class="p-3">9</th>
+                                        <td class="p-3">
+                                            <a href="#" class="text-dark">
+                                                <div class="d-flex align-items-center">
+                                                    <img src="{% static 'assets/images/client/09.jpg' %}" class="avatar avatar-md-sm rounded-circle shadow" alt="">
+                                                    <span class="ms-2">Christopher Burrell</span>
+                                                </div>
+                                            </a>
+                                        </td>
+                                        <td class="p-3">28</td>
+                                        <td class="p-3">Female</td>
+                                        <td class="p-3">Urology</td>
+                                        <td class="p-3">20th Dec 2020</td>
+                                        <td class="p-3">11:00AM</td>
+                                        <td class="p-3">
+                                            <button class="btn btn-primary">Join</button>
+                                        </td>
+                                  
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <th class="p-3">10</th>
+                                        <td class="p-3">
+                                            <a href="#" class="text-dark">
+                                                <div class="d-flex align-items-center">
+                                                    <img src="{% static 'assets/images/client/10.jpg' %}" class="avatar avatar-md-sm rounded-circle shadow" alt="">
+                                                    <span class="ms-2">Mary Skeens</span>
+                                                </div>
+                                            </a>
+                                        </td>
+                                        <td class="p-3">28</td>
+                                        <td class="p-3">Female</td>
+                                        <td class="p-3">Neurology</td>
+                                        <td class="p-3">20th Dec 2020</td>
+                                        <td class="p-3">11:00AM</td>
+                                        <td class="p-3">
+                                            <button class="btn btn-primary">Join</button>
+                                        </td>
+                                     
+                                        
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div><!--end row-->
+                {% endif %}
+
+                
+            </div><!--end col-->
+        </div><!--end row-->
+    </div><!--end container-->
+</section><!--end section-->
+<!-- Cta End -->
+
+
+
+{% endblock %}

@@ -1,0 +1,482 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block name %}<h6 > Hello {{user.full_name}}</h6>{% endblock name %}
+
+{% block content %}
+
+ <!-- Start Hero -->
+ <section class="bg-half-170 pb-0 d-table w-100" style="background-color: beige;">
+    <div class="container">
+        <div class="row mt-5 mt-sm-0 align-items-center">
+            <div class="col-md-7">
+                <div class="heading-title">
+                    <h5 style="color: grey;" class=" mb-3">Feeling sick away from Home?<br>
+                        Too Busy to visit a Doctor?<br>
+                        Tired of waiting too long for a Doctor’s Consultation?</h5><br>
+                        <h3>Consult Doctor across different specialities over <span style="color: #D36371;">Chat & Video Call</span></h3>
+                </div><br><br>
+                <div class="subcribe-form mt-4">
+                    <form class="ms-0" style="max-width: 550px;">
+                        <div class="mb-5">
+                            <input type="text" id="name" name="name" class="border bg-white rounded-pill" required="" placeholder="Doctor name...">
+                            <button type="submit" class="btn btn-pills btn-primary"><i class="ri-search-line align-middle me-1"></i> Search</button>
+                        </div>
+                      
+                    </form>
+                </div>
+            </div><!--end col-->
+
+            <div class="col-md-5 mt-4 pt-2 mt-sm-0 pt-sm-0 ">
+                <img src="{% static 'assets/images/Online Doctor-pana.svg' %}" class="img-fluid" alt="image">
+            </div><!--end col-->
+        </div><!--end row-->
+    </div><!--end container-->
+</section><!--end section-->
+<!-- End Hero -->
+
+
+
+<!-- Start -->
+<section class="section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <div class="section-title text-center mb-4 pb-2">
+                    <h2 class="title mb-4">Specialities</h2>
+                </div>
+            </div><!--end col-->
+        </div><!--end row-->
+
+        <div class="row justify-content-center">
+            <div class="col-xl col-md-4 col-12 mt-4 pt-2">
+                <div class="card features feature-primary border-0 p-4 rounded-md shadow">
+                    <div class="icon text-center rounded-lg">
+                        <i class="uil uil-user-md h3 mb-0"></i>
+                    </div>
+                    <div class="card-body p-0 mt-3">
+                        <a href="departments.html" class="title text-dark h5">Ornithologists</a>
+                        <p class="text-muted mt-3">Due to its wide spread use as filler text</p>
+                        <a href="departments.html" class="link">Find here <i class="ri-arrow-right-line align-middle"></i></a>
+                    </div>
+                </div>
+            </div><!--end col-->
+            
+            <div class="col-xl col-md-4 col-12 mt-4 pt-2">
+                <div class="card features feature-primary border-0 p-4 rounded-md shadow">
+                    <div class="icon text-center rounded-lg">
+                        <i class="uil uil-capsule h3 mb-0"></i>
+                    </div>
+                    <div class="card-body p-0 mt-3">
+                        <a href="departments.html" class="title text-dark h5">Paediatrics</a>
+                        <p class="text-muted mt-3">Due to its wide spread use as filler text</p>
+                        <a href="departments.html" class="link">Find here <i class="ri-arrow-right-line align-middle"></i></a>
+                    </div>
+                </div>
+            </div><!--end col-->
+
+            <div class="col-xl col-md-4 col-12 mt-4 pt-2">
+                <div class="card features feature-primary border-0 p-4 rounded-md shadow">
+                    <div class="icon text-center rounded-lg">
+                        <i class="uil uil-microscope h3 mb-0"></i>
+                    </div>
+                    <div class="card-body p-0 mt-3">
+                        <a href="departments.html" class="title text-dark h5">Cardiologists</a>
+                        <p class="text-muted mt-3">Due to its wide spread use as filler text</p>
+                        <a href="departments.html" class="link">Find here <i class="ri-arrow-right-line align-middle"></i></a>
+                    </div>
+                </div>
+            </div><!--end col-->
+
+            <div class="row justify-content-center">
+                <div class="col-xl col-md-4 col-12 mt-4 pt-2">
+                    <div class="card features feature-primary border-0 p-4 rounded-md shadow">
+                        <div class="icon text-center rounded-lg">
+                            <i class="uil uil-user-md h3 mb-0"></i>
+                        </div>
+                        <div class="card-body p-0 mt-3">
+                            <a href="departments.html" class="title text-dark h5">Ornithologists</a>
+                            <p class="text-muted mt-3">Due to its wide spread use as filler text</p>
+                            <a href="departments.html" class="link">Find here <i class="ri-arrow-right-line align-middle"></i></a>
+                        </div>
+                    </div>
+                </div><!--end col-->
+                
+                <div class="col-xl col-md-4 col-12 mt-4 pt-2">
+                    <div class="card features feature-primary border-0 p-4 rounded-md shadow">
+                        <div class="icon text-center rounded-lg">
+                            <i class="uil uil-capsule h3 mb-0"></i>
+                        </div>
+                        <div class="card-body p-0 mt-3">
+                            <a href="departments.html" class="title text-dark h5">Paediatrics</a>
+                            <p class="text-muted mt-3">Due to its wide spread use as filler text</p>
+                            <a href="departments.html" class="link">Find here <i class="ri-arrow-right-line align-middle"></i></a>
+                        </div>
+                    </div>
+                </div><!--end col-->
+    
+                <div class="col-xl col-md-4 col-12 mt-4 pt-2">
+                    <div class="card features feature-primary border-0 p-4 rounded-md shadow">
+                        <div class="icon text-center rounded-lg">
+                            <i class="uil uil-microscope h3 mb-0"></i>
+                        </div>
+                        <div class="card-body p-0 mt-3">
+                            <a href="departments.html" class="title text-dark h5">Cardiologists</a>
+                            <p class="text-muted mt-3">Due to its wide spread use as filler text</p>
+                            <a href="departments.html" class="link">Find here <i class="ri-arrow-right-line align-middle"></i></a>
+                        </div>
+                    </div>
+                </div><!--end col-->
+
+            
+        </div><!--end row-->
+    </div><!--end container-->
+
+    <div class="container mt-5 ">
+        <div class="row align-items-center">
+            <h3 class="text-center mb-5">How does this Work?</h3>
+            <div class="col-lg-7 col-md-6">
+                <div class="section-title me-lg-5">
+                    <h4 style="color: grey;" class="title mt-3 mb-4">Select the type of Specialites you<br> would like to consult with the Doctor<br> and make an Appointment.</h4>
+                </div>
+            </div><!--end col-->
+
+            <div class="col-lg-5 col-md-6 mt-4 pt-2 mt-sm-0 pt-sm-0">
+                <div class="position-relative">
+                    <img src="{% static 'assets/images/Select-pana.svg' %}" class="img-fluid" alt="">
+                </div>
+            </div><!--end col-->
+
+            <div class="col-lg-5 col-md-6 mt-4 pt-2 mt-sm-0 pt-sm-0">
+                <div class="position-relative">
+                    <img src="{% static 'assets/images/Online Doctor-amico.svg' %}" class="img-fluid" alt="">
+                </div>
+            </div><!--end col-->
+
+            <div class="col-lg-7 col-md-6" > 
+                <div class="section-title me-lg-5" style="margin-left: 80px;">
+                    <h4 style="color: grey;" class="title mt-3 mb-4">Tell Your Concerns and Your <br>Problems to the Doctor by Video <br> Chat or Message.</h4>
+                </div>
+            </div><!--end col-->
+            
+            <div class="col-lg-7 col-md-6">
+                <div class="section-title me-lg-5">
+                    <h4 style="color: grey;" class="title mt-3 mb-4">Get Medical Prescription from the <br> Doctor and follow up If you have<br> any Doubt.</h4>
+                </div>
+            </div><!--end col-->
+
+            <div class="col-lg-5 col-md-6 mt-4 pt-2 mt-sm-0 pt-sm-0">
+                <div class="position-relative">
+                    <img src="{% static 'assets/images/Medical prescription-pana.svg' %}" class="img-fluid" alt="">
+                </div>
+            </div><!--end col-->
+        </div><!--end row-->
+    </div><!--end container-->
+</section><!--end section-->
+<!-- End -->
+
+<!-- Cta Start -->
+<section class="section" style="background: url('static/assets/images/Medical care-amico.svg') no-repeat ;">
+    <div class="bg-overlay bg-overlay-dark" style="opacity: 0.3;"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5 offset-lg-7 col-md-7 offset-md-5">
+                <div class="features feature-bg-primary d-flex bg-white p-4 rounded-md shadow position-relative overflow-hidden">
+                    <i class="uil uil-briefcase icons h2 mb-0 text-primary"></i>
+                    <div class="ms-3">
+                        <h5 class="titles">Consult Top Doctors 24x7</h5>
+                        <p class="text-muted para mb-0">Connect instantly with a 24x7 specialist or choose to video visit a particular doctor.</p>
+                    </div>
+                    <div class="big-icon">
+                        <i class="uil uil-briefcase"></i>
+                    </div>
+                </div>
+
+                <div class="features feature-bg-primary d-flex bg-white p-4 rounded-md shadow position-relative overflow-hidden mt-4">
+                    <i class="uil uil-airplay icons h2 mb-0 text-primary"></i>
+                    <div class="ms-3">
+                        <h5 class="titles">Convenient and Easy</h5>
+                        <p class="text-muted para mb-0">Start an instant consultation within 2 minutes or do video consultation at the scheduled time.</p>
+                    </div>
+                    <div class="big-icon">
+                        <i class="uil uil-airplay"></i>
+                    </div>
+                </div>
+
+                <div class="features feature-bg-primary d-flex bg-white p-4 rounded-md shadow position-relative overflow-hidden mt-4">
+                    <i class="uil uil-flip-v icons h2 mb-0 text-primary"></i>
+                    <div class="ms-3">
+                        <h5 class="titles">100% Safe Consultations</h5>
+                        <p class="text-muted para mb-0">Be assured that your online consultation will be fully private and secured.</p>
+                    </div>
+                    <div class="big-icon">
+                        <i class="uil uil-flip-v"></i>
+                    </div>
+                </div>
+            </div><!--end col-->
+        </div><!--end row-->
+    </div><!--end container-->
+</section><!--end section-->
+<!-- Cta End -->
+
+<!-- Start -->
+<section class="section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <div class="section-title text-center mb-4 pb-2">
+                    <h4 class="title mt-3 mb-4">Find Your Specialists</h4>
+                </div>
+            </div><!--end col-->
+        </div><!--end row-->
+
+        <div class="row align-items-center">
+            <div class="col-xl-3 col-lg-3 col-md-6 mt-4 pt-2">
+                <div class="card team border-0 rounded shadow overflow-hidden">
+                    <div class="team-person position-relative overflow-hidden">
+                        <img src="{% static 'assets/images/doctors/01.jpg' %}" class="img-fluid" alt="">
+                        <ul class="list-unstyled team-like">
+                            <li><a href="javascript:void(0)" class="btn btn-icon btn-pills btn-soft-danger"><i data-feather="heart" class="icons"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="card-body">
+                        <a href="doctor-team-two.html" class="title text-dark h5 d-block mb-0">Calvin Carlo</a>
+                        <small class="text-muted speciality">Eye Care</small>
+                        <div class="d-flex justify-content-between align-items-center mt-2">
+                            <ul class="list-unstyled mb-0">
+                                <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
+                                <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
+                                <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
+                                <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
+                                <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
+                            </ul>
+                            <p class="text-muted mb-0">5 Star</p>
+                        </div>
+                        <ul class="list-unstyled mt-2 mb-0">
+                            <li class="d-flex">
+                                <i class="ri-map-pin-line text-primary align-middle"></i>
+                                <small class="text-muted ms-2">63, PG Shustoke, UK</small>
+                            </li>
+                            <li class="d-flex mt-2">
+                                <i class="ri-time-line text-primary align-middle"></i>
+                                <small class="text-muted ms-2">Mon: 2:00PM - 6:00PM</small>
+                            </li>
+                            <li class="d-flex mt-2">
+                                <i class="ri-money-dollar-circle-line text-primary align-middle"></i>
+                                <small class="text-muted ms-2">$ 75 USD / Visit</small>
+                            </li>
+                        </ul>
+                        <ul class="list-unstyled mt-2 mb-0">
+                            <li class="list-inline-item"><a href="javascript:void(0)" class="btn btn-icon btn-pills btn-soft-primary"><i data-feather="facebook" class="icons"></i></a></li>
+                            <li class="mt-2 list-inline-item"><a href="javascript:void(0)" class="btn btn-icon btn-pills btn-soft-primary"><i data-feather="linkedin" class="icons"></i></a></li>
+                            <li class="mt-2 list-inline-item"><a href="javascript:void(0)" class="btn btn-icon btn-pills btn-soft-primary"><i data-feather="github" class="icons"></i></a></li>
+                            <li class="mt-2 list-inline-item"><a href="javascript:void(0)" class="btn btn-icon btn-pills btn-soft-primary"><i data-feather="twitter" class="icons"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div><!--end col-->
+
+            <div class="col-xl-3 col-lg-3 col-md-6 mt-4 pt-2">
+                <div class="card team border-0 rounded shadow overflow-hidden">
+                    <div class="team-person position-relative overflow-hidden">
+                        <img src="{% static 'assets/images/doctors/01.jpg' %}" class="img-fluid" alt="">
+                        <ul class="list-unstyled team-like">
+                            <li><a href="javascript:void(0)" class="btn btn-icon btn-pills btn-soft-danger"><i data-feather="heart" class="icons"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="card-body">
+                        <a href="doctor-team-two.html" class="title text-dark h5 d-block mb-0">Calvin Carlo</a>
+                        <small class="text-muted speciality">Eye Care</small>
+                        <div class="d-flex justify-content-between align-items-center mt-2">
+                            <ul class="list-unstyled mb-0">
+                                <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
+                                <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
+                                <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
+                                <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
+                                <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
+                            </ul>
+                            <p class="text-muted mb-0">5 Star</p>
+                        </div>
+                        <ul class="list-unstyled mt-2 mb-0">
+                            <li class="d-flex">
+                                <i class="ri-map-pin-line text-primary align-middle"></i>
+                                <small class="text-muted ms-2">63, PG Shustoke, UK</small>
+                            </li>
+                            <li class="d-flex mt-2">
+                                <i class="ri-time-line text-primary align-middle"></i>
+                                <small class="text-muted ms-2">Mon: 2:00PM - 6:00PM</small>
+                            </li>
+                            <li class="d-flex mt-2">
+                                <i class="ri-money-dollar-circle-line text-primary align-middle"></i>
+                                <small class="text-muted ms-2">$ 75 USD / Visit</small>
+                            </li>
+                        </ul>
+                        <ul class="list-unstyled mt-2 mb-0">
+                            <li class="list-inline-item"><a href="javascript:void(0)" class="btn btn-icon btn-pills btn-soft-primary"><i data-feather="facebook" class="icons"></i></a></li>
+                            <li class="mt-2 list-inline-item"><a href="javascript:void(0)" class="btn btn-icon btn-pills btn-soft-primary"><i data-feather="linkedin" class="icons"></i></a></li>
+                            <li class="mt-2 list-inline-item"><a href="javascript:void(0)" class="btn btn-icon btn-pills btn-soft-primary"><i data-feather="github" class="icons"></i></a></li>
+                            <li class="mt-2 list-inline-item"><a href="javascript:void(0)" class="btn btn-icon btn-pills btn-soft-primary"><i data-feather="twitter" class="icons"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div><!--end col-->
+
+            <div class="col-xl-3 col-lg-3 col-md-6 mt-4 pt-2">
+                <div class="card team border-0 rounded shadow overflow-hidden">
+                    <div class="team-person position-relative overflow-hidden">
+                        <img src="{% static 'assets/images/doctors/01.jpg' %}" class="img-fluid" alt="">
+                        <ul class="list-unstyled team-like">
+                            <li><a href="javascript:void(0)" class="btn btn-icon btn-pills btn-soft-danger"><i data-feather="heart" class="icons"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="card-body">
+                        <a href="doctor-team-two.html" class="title text-dark h5 d-block mb-0">Calvin Carlo</a>
+                        <small class="text-muted speciality">Eye Care</small>
+                        <div class="d-flex justify-content-between align-items-center mt-2">
+                            <ul class="list-unstyled mb-0">
+                                <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
+                                <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
+                                <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
+                                <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
+                                <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
+                            </ul>
+                            <p class="text-muted mb-0">5 Star</p>
+                        </div>
+                        <ul class="list-unstyled mt-2 mb-0">
+                            <li class="d-flex">
+                                <i class="ri-map-pin-line text-primary align-middle"></i>
+                                <small class="text-muted ms-2">63, PG Shustoke, UK</small>
+                            </li>
+                            <li class="d-flex mt-2">
+                                <i class="ri-time-line text-primary align-middle"></i>
+                                <small class="text-muted ms-2">Mon: 2:00PM - 6:00PM</small>
+                            </li>
+                            <li class="d-flex mt-2">
+                                <i class="ri-money-dollar-circle-line text-primary align-middle"></i>
+                                <small class="text-muted ms-2">$ 75 USD / Visit</small>
+                            </li>
+                        </ul>
+                        <ul class="list-unstyled mt-2 mb-0">
+                            <li class="list-inline-item"><a href="javascript:void(0)" class="btn btn-icon btn-pills btn-soft-primary"><i data-feather="facebook" class="icons"></i></a></li>
+                            <li class="mt-2 list-inline-item"><a href="javascript:void(0)" class="btn btn-icon btn-pills btn-soft-primary"><i data-feather="linkedin" class="icons"></i></a></li>
+                            <li class="mt-2 list-inline-item"><a href="javascript:void(0)" class="btn btn-icon btn-pills btn-soft-primary"><i data-feather="github" class="icons"></i></a></li>
+                            <li class="mt-2 list-inline-item"><a href="javascript:void(0)" class="btn btn-icon btn-pills btn-soft-primary"><i data-feather="twitter" class="icons"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div><!--end col-->
+
+            <div class="col-xl-3 col-lg-3 col-md-6 mt-4 pt-2">
+                <div class="card team border-0 rounded shadow overflow-hidden">
+                    <div class="team-person position-relative overflow-hidden">
+                        <img src="{% static 'assets/images/doctors/01.jpg' %}" class="img-fluid" alt="">
+                        <ul class="list-unstyled team-like">
+                            <li><a href="javascript:void(0)" class="btn btn-icon btn-pills btn-soft-danger"><i data-feather="heart" class="icons"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="card-body">
+                        <a href="doctor-team-two.html" class="title text-dark h5 d-block mb-0">Calvin Carlo</a>
+                        <small class="text-muted speciality">Eye Care</small>
+                        <div class="d-flex justify-content-between align-items-center mt-2">
+                            <ul class="list-unstyled mb-0">
+                                <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
+                                <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
+                                <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
+                                <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
+                                <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
+                            </ul>
+                            <p class="text-muted mb-0">5 Star</p>
+                        </div>
+                        <ul class="list-unstyled mt-2 mb-0">
+                            <li class="d-flex">
+                                <i class="ri-map-pin-line text-primary align-middle"></i>
+                                <small class="text-muted ms-2">63, PG Shustoke, UK</small>
+                            </li>
+                            <li class="d-flex mt-2">
+                                <i class="ri-time-line text-primary align-middle"></i>
+                                <small class="text-muted ms-2">Mon: 2:00PM - 6:00PM</small>
+                            </li>
+                            <li class="d-flex mt-2">
+                                <i class="ri-money-dollar-circle-line text-primary align-middle"></i>
+                                <small class="text-muted ms-2">$ 75 USD / Visit</small>
+                            </li>
+                        </ul>
+                        <ul class="list-unstyled mt-2 mb-0">
+                            <li class="list-inline-item"><a href="javascript:void(0)" class="btn btn-icon btn-pills btn-soft-primary"><i data-feather="facebook" class="icons"></i></a></li>
+                            <li class="mt-2 list-inline-item"><a href="javascript:void(0)" class="btn btn-icon btn-pills btn-soft-primary"><i data-feather="linkedin" class="icons"></i></a></li>
+                            <li class="mt-2 list-inline-item"><a href="javascript:void(0)" class="btn btn-icon btn-pills btn-soft-primary"><i data-feather="github" class="icons"></i></a></li>
+                            <li class="mt-2 list-inline-item"><a href="javascript:void(0)" class="btn btn-icon btn-pills btn-soft-primary"><i data-feather="twitter" class="icons"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div><!--end col-->
+
+            
+            
+            
+        </div><!--end row-->
+    </div><!--end container-->
+
+    <div class="container mt-100 mt-60">
+        <div class="row align-items-center">
+            <h3 class="text-center mb-5">FAQs</h3>
+            <div class="col-md-6 col-12">
+                <div class="me-lg-5">
+                    <img src="{% static 'assets/images/svg/vaccine-development-amico.svg' %}" class="img-fluid" alt="">
+                </div>
+            </div><!--end col-->
+            
+            <div class="col-md-6 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
+                <div class="accordion" id="accordionExample">
+
+                    <div class="accordion-item border rounded">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button border-0 bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                                aria-expanded="true" aria-controls="collapseOne">
+                                What is Online Consultation?
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse border-0 collapse show" aria-labelledby="headingOne"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body text-muted">
+                                Online doctor consultation or online medical consultation is a method to connect patients and doctors virtually. It is a convenient and easy way to get online doctor advice using doctor apps or telemedicine apps or platforms, and the internet.                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item border rounded mt-2">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                aria-expanded="false" aria-controls="collapseTwo">
+                                What happens if I don’t get a response from a doctor?
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse border-0 collapse" aria-labelledby="headingTwo"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body text-muted">
+                                In the unlikely event that an online doctor does not respond, you will be entitled to a 100% refund.                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item border rounded mt-2">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Is my consultation private with my doctor?                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse border-0 collapse" aria-labelledby="headingThree"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body text-muted">
+                                All your medical history and online consultation with us are completely private and confidential. We are compliant with industry standards to ensure your consultations are securely stored.                            </div>
+                        </div>
+                    </div>
+
+                   
+                </div>
+            </div><!--end col-->
+        </div><!--end row-->
+
+        
+    </div><!--end container-->
+</section><!--end section-->
+<!-- End -->
+
+{% endblock %}
